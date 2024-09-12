@@ -13,7 +13,7 @@ const Home2 = () => {
         <div className=' flex justify-center items-center h-full w-full md:order-1 p-6'>
             {/* Images Div */}
             <div className=' w-full flex justify-center'>
-                <img className='w-48 h-48 md:w-72 md:h-72 rounded-full border-white  object-contain' src="homeImages.jpg" alt="Profile" />
+                <img className='w-48 h-48 md:w-72 md:h-72 rounded-md  object-fit' src="homeImages.jpg" alt="Profile" />
             </div>
         </div>
     

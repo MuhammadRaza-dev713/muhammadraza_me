@@ -2,8 +2,8 @@ import React from 'react'
 import { FaUserTie } from 'react-icons/fa';
 import { FaCheckCircle } from 'react-icons/fa';
 import { FaHeadset } from 'react-icons/fa';
-import { Link } from 'react-router-dom';
-import Contact from './Contact';
+// import { Link } from 'react-router-dom';
+// import Contact from './Contact';
 import { IoMdDocument } from 'react-icons/io';
 
 
@@ -24,7 +24,7 @@ export const About = () => {
           {/* left div */}
           <div className='flex justify-center items-center w-screen h-full p-4'>
             {/* picture div */}
-              <img className='max-w-[300px] max-h-[300px] rounded-lg ' src="homeImages.jpg" alt="" />
+              <img className='max-w-[300px] max-h-[300px] rounded-lg ' src="aboutpicture.jpeg" alt="" />
           
           </div>
           {/* right div */}
@@ -55,10 +55,10 @@ export const About = () => {
                 Frontend developer, I create web pages with UI / UX user interface, I have years of experience in WEB2.0 & WEB3.0 and all of my clients are satisfied with the projects I have delivered.
                 </div>
                 <div className='w-[250px]'>
-                <Link className=' bg-gray-700 text-white py-4 px-6 mt-4 rounded-2xl flex justify-center items-center gap-2 text-xl hover:bg-gray-500 transition-colors duration-300' to={"/contact"}>
+                <a className=' bg-gray-700 text-white py-4 px-6 mt-4 rounded-2xl flex justify-center items-center gap-2 text-xl hover:bg-gray-500 transition-colors duration-300' href="/cv/myresume.pdf" download="MYRESUME.pdf">
                         Download CV                       
                         <IoMdDocument className="text-white w-6 h-6 hover:text-gray-600 transition-colors duration-300" />
-                    </Link>
+                    </a>
                 </div>
 
               </div>
