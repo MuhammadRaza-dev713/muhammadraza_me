@@ -78,7 +78,7 @@ const Skills = () => {
                         <p className='text-gray-300 text-sm'>Intermediate</p>
                     </div>
                     <div className='flex flex-col justify-center items-center gap-1'>
-                        <h1 className='font-semibold text-gray-600'>Smart Contract</h1>
+                        <h1 className='font-semibold text-gray-600'>Python</h1>
                         <p className='text-gray-300 text-sm'>Intermediate</p>
                     </div>
                 </div>
