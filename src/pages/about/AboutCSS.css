@@ -1,0 +1,25 @@
+@keyframes morph {
+
+  0%,
+  100% {
+    border-radius: 42% 56% 72% 28% / 42% 72% 56% 48%;
+  }
+
+  33% {
+    border-radius: 72% 28% 48% 48% / 28% 28% 72% 72%;
+  }
+
+  66% {
+    border-radius: 100% 56% 56% 100% / 100% 100% 56% 56%;
+  }
+}
+
+.blobImg {
+  width: 18rem;
+  height: 18rem;
+  background: url('../../assets/aboutimg04.png');
+  background-size: cover;
+  background-position: cover;
+
+  animation: morph 3.75s linear infinite;
+}
