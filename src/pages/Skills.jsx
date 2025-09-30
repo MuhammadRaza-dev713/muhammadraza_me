@@ -121,16 +121,17 @@ const Skills = () => {
                             </div>
                             <div className="flex flex-col items-center">
                                 <h3 className="font-semibold text-gray-600">
-                                    Django Rest Framework
+                                    Python
                                 </h3>
                                 <p className="text-gray-400 text-sm">Intermediate</p>
                             </div>
-                            <div className="flex flex-col items-center">
+                            <div className="flex flex-col items-center col-span-2">
                                 <h3 className="font-semibold text-gray-600">Git / GitHub</h3>
                                 <p className="text-gray-400 text-sm">Intermediate</p>
                             </div>
-                            <div className="flex flex-col items-center">
-                                <h3 className="font-semibold text-gray-600">Python</h3>
+                            
+                            <div className="flex flex-col items-center col-span-2">
+                                <h3 className="font-semibold text-gray-600">AWS/GCP/Azure</h3>
                                 <p className="text-gray-400 text-sm">Intermediate</p>
                             </div>
                         </div>
