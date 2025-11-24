@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="utf-8" />
@@ -19,5 +19,49 @@
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
    
+  </body>
+</html> -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="%PUBLIC_URL%/vercel_favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta
+      name="description"
+      content="Web site created using create-react-app"
+    />
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+
+    <title>MuhammadRaza | Portfolio</title>
+  </head>
+
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"></div>
+
+    <!-- 🔥 Your Tracking Script (paste ur own URL here) -->
+    <script
+      src="https://we-track-analytics.vercel.app/tracker/trackmaster.js"
+      data-site-id="raza-portfolio"
+      async
+    ></script>
+
+    <!-- Or inline tracking logic -->
+    <script>
+      window._mrTracker = window._mrTracker || [];
+
+      function track(event, data = {}) {
+        window._mrTracker.push({ event, data, timestamp: Date.now() });
+      }
+
+      // Basic visitor track
+      track("page_view", { path: window.location.pathname });
+    </script>
   </body>
 </html>
