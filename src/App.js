@@ -1,3 +1,4 @@
+// src/App.js
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import './App.css';
 import Home2 from './pages/home/Home2';
