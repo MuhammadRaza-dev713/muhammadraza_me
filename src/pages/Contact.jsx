@@ -14,16 +14,57 @@ const Contact = () => {
   const [message, setMessage] = useState("");
   const navigate = useNavigate();
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    axios
-      .post("http://localhost:3001/contact", { name, email, message })
-      .then((result) => console.log(result.data))
-      .catch((error) => console.log(error));
+  // const handleSubmit = (e) => {
+  //   e.preventDefault();
+  //   axios
+  //     .post("http://localhost:3001/contact", { name, email, message })
+  //     .then((result) => console.log(result.data))
+  //     .catch((error) => console.log(error));
+
+  //   alert("✅ Form Submitted Successfully!");
+  //   navigate("/");
+  // };
+
+
+  const handleSubmit = async (e) => {
+  e.preventDefault();
+
+  try {
+    const res = await axios.post("http://localhost:3001/contact", {
+      name,
+      email,
+      message,
+    });
+
+    // ✅ Push GTM event ONLY after success
+    window.dataLayer = window.dataLayer || [];
+    window.dataLayer.push({
+      event: "contact_form_submit",
+      form_id: "contact",
+      form_name: "Contact Form",
+      form_destination: window.location.href,
+      form_length: 3, // name/email/message
+    });
 
     alert("✅ Form Submitted Successfully!");
-    navigate("/");
-  };
+
+    // ✅ Give GTM/GA4 a tiny moment before SPA route change
+    setTimeout(() => navigate("/"), 300);
+  } catch (error) {
+    console.log(error);
+
+    // Optional: track failures too
+    window.dataLayer = window.dataLayer || [];
+    window.dataLayer.push({
+      event: "contact_form_error",
+      form_id: "contact",
+      form_name: "Contact Form",
+      error_message: error?.message || "unknown",
+    });
+
+    alert("❌ Submission failed. Please try again.");
+  }
+};
 
   return (
     <div className="bg-gray-100 flex flex-col items-center">
