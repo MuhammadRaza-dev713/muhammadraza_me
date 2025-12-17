@@ -26,45 +26,28 @@ const Contact = () => {
   // };
 
 
-const handleSubmit = async (e) => {
+const handleSubmit = (e) => {
   e.preventDefault();
 
-  // Track attempt (user clicked submit with valid HTML required fields)
+  // ✅ GA4/GTM tracking
   window.dataLayer = window.dataLayer || [];
   window.dataLayer.push({
-    event: "contact_form_attempt",
+    event: "contact_form_submit",
     form_id: "contact",
     form_name: "Contact Form",
     form_destination: window.location.href,
     form_length: 3,
   });
 
-  try {
-    const res = await axios.post("/api/contact", { name, email, message });
+  alert("✅ Form Submitted Successfully!");
 
-    // Track success
-    window.dataLayer.push({
-      event: "contact_form_submit",
-      form_id: "contact",
-      form_name: "Contact Form",
-      form_destination: window.location.href,
-      form_length: 3,
-    });
+  // optional: clear fields
+  setName("");
+  setEmail("");
+  setMessage("");
 
-    alert("✅ Form Submitted Successfully!");
-    setTimeout(() => navigate("/"), 300);
-  } catch (error) {
-    // Track error
-    window.dataLayer.push({
-      event: "contact_form_error",
-      form_id: "contact",
-      form_name: "Contact Form",
-      error_message: error?.message || "unknown",
-    });
-
-    console.log(error);
-    alert("❌ Submission failed. Please try again.");
-  }
+  // optional: route change (delay a bit so GTM fires)
+  setTimeout(() => navigate("/"), 300);
 };
 
 
