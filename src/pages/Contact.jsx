@@ -30,7 +30,7 @@ const Contact = () => {
   e.preventDefault();
 
   try {
-    const res = await axios.post("http://localhost:3001/contact", {
+    const res = await axios.post("https://muhammadraza-me.vercel.app", {
       name,
       email,
       message,
