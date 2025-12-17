@@ -26,35 +26,35 @@ const Contact = () => {
   // };
 
 
-  const handleSubmit = async (e) => {
+const handleSubmit = async (e) => {
   e.preventDefault();
 
-  try {
-    const res = await axios.post("https://muhammadraza-me.vercel.app", {
-      name,
-      email,
-      message,
-    });
+  // Track attempt (user clicked submit with valid HTML required fields)
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push({
+    event: "contact_form_attempt",
+    form_id: "contact",
+    form_name: "Contact Form",
+    form_destination: window.location.href,
+    form_length: 3,
+  });
 
-    // ✅ Push GTM event ONLY after success
-    window.dataLayer = window.dataLayer || [];
+  try {
+    const res = await axios.post("/api/contact", { name, email, message });
+
+    // Track success
     window.dataLayer.push({
       event: "contact_form_submit",
       form_id: "contact",
       form_name: "Contact Form",
       form_destination: window.location.href,
-      form_length: 3, // name/email/message
+      form_length: 3,
     });
 
     alert("✅ Form Submitted Successfully!");
-
-    // ✅ Give GTM/GA4 a tiny moment before SPA route change
     setTimeout(() => navigate("/"), 300);
   } catch (error) {
-    console.log(error);
-
-    // Optional: track failures too
-    window.dataLayer = window.dataLayer || [];
+    // Track error
     window.dataLayer.push({
       event: "contact_form_error",
       form_id: "contact",
@@ -62,9 +62,11 @@ const Contact = () => {
       error_message: error?.message || "unknown",
     });
 
+    console.log(error);
     alert("❌ Submission failed. Please try again.");
   }
 };
+
 
   return (
     <div className="bg-gray-100 flex flex-col items-center">
