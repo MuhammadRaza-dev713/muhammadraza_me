@@ -6,7 +6,14 @@ const Skills = () => {
     const [activeTab, setActiveTab] = useState("education");
 
     const qualifications = [
-         {
+        {
+            type: "Experience",
+            title: "Full Stack Developer",
+            place: "WeTrackAds (on-site)",
+            date: "2025 - 2026",
+            City: "Islamabad, Pakistan"
+        },
+        {
             type: "Experience",
             title: "Full Stack Developer",
             place: "Ivy Interactive Solutions (on-site)",
@@ -31,21 +38,21 @@ const Skills = () => {
             type: "Experience",
             title: "Internship React Developer",
             place: "Signup Solutions",
-            date: "2022 - 2022",
+            date: "2023",
             City: "Islamabad, Pakistan"
         },
         {
             type: "Education",
             title: "Software Engineering",
-            place: "Bachelor - NUML University",
+            place: "Bachelor - National University of Medern Languages (NUML) Islamabad",
             date: "2022 - 2025",
             City: "Islamabad, Pakistan"
         },
         {
             type: "Education",
             title: "Intermediate",
-            place: "Punjab College",
-            date: "2016 - 2018",
+            place: "Punjab Group Of Colleges",
+            date: "2020 - 2022",
             City: "Islamabad, Pakistan"
         },
     ];
@@ -116,12 +123,12 @@ const Skills = () => {
                                 <p className="text-gray-400 text-sm">Intermediate</p>
                             </div>
                             <div className="flex flex-col items-center">
-                                <h3 className="font-semibold text-gray-600">MongoDB</h3>
-                                <p className="text-gray-400 text-sm">Expert</p>
+                                <h3 className="font-semibold text-gray-600">MongoDB / PostGreSQL </h3>
+                                <p className="text-gray-400 text-sm">Intermediate</p>
                             </div>
                             <div className="flex flex-col items-center">
                                 <h3 className="font-semibold text-gray-600">
-                                    Python
+                                    Python / Django
                                 </h3>
                                 <p className="text-gray-400 text-sm">Intermediate</p>
                             </div>
@@ -129,7 +136,7 @@ const Skills = () => {
                                 <h3 className="font-semibold text-gray-600">Git / GitHub</h3>
                                 <p className="text-gray-400 text-sm">Intermediate</p>
                             </div>
-                            
+
                             <div className="flex flex-col items-center col-span-2">
                                 <h3 className="font-semibold text-gray-600">AWS/GCP/Azure</h3>
                                 <p className="text-gray-400 text-sm">Intermediate</p>
@@ -163,16 +170,16 @@ const Skills = () => {
                                 </div>
 
                                 {/* Card */}
-                               <div className="p-5 bg-white shadow-md rounded-2xl flex-1 flex justify-between items-start">
-    <div>
-        <h3 className="font-bold text-lg text-gray-700">{item.title}</h3>
-        <p className="text-sm text-gray-500">{item.place}</p>
-        <p className="text-xs text-gray-400 mt-1">{item.date}</p>
-    </div>
-    <div className="text-xs text-gray-400 whitespace-nowrap pl-4 pt-1">
-        {item.City}
-    </div>
-</div>
+                                <div className="p-5 bg-white shadow-md rounded-2xl flex-1 flex justify-between items-start">
+                                    <div>
+                                        <h3 className="font-bold text-lg text-gray-700">{item.title}</h3>
+                                        <p className="text-sm text-gray-500">{item.place}</p>
+                                        <p className="text-xs text-gray-400 mt-1">{item.date}</p>
+                                    </div>
+                                    <div className="text-xs text-gray-400 whitespace-nowrap pl-4 pt-1">
+                                        {item.City}
+                                    </div>
+                                </div>
                             </div>
                         ))}
                     </div>

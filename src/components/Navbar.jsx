@@ -18,7 +18,7 @@ const Navbar = () => {
           duration={500} 
           className="text-xl font-semibold text-gray-700 hover:text-orange-600 transition-all cursor-pointer"
         >
-          Frontend Engineer
+          FullStack Web Engineer
         </Link>
 
         {/* Mobile Menu Button */}

@@ -89,10 +89,10 @@ const Home2 = () => {
         </div>
 
             {/* Sections */}
-            <section id="about" className="py-20"><About /></section>
-            <section id="skills" className="py-20"><Skills /></section>
-            <section id="projects" className="py-20"><Projects /></section>
-            <section id="contact" className="py-20"><Contact /></section>
+            <section id="about" className=""><About /></section>
+            <section id="skills" className=""><Skills /></section>
+            <section id="projects" className=""><Projects /></section>
+            <section id="contact" className=""><Contact /></section>
         </>
     );
 };

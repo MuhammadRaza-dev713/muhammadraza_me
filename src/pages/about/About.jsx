@@ -54,14 +54,17 @@ export const About = () => {
               </div>
             </div>
 
-            {/* Description */}
-            <p className="text-center md:text-left text-gray-600 font-medium leading-relaxed max-w-lg">
-              I’m a Frontend Developer who builds responsive, user-friendly, and
-              modern websites with a strong focus on UI/UX. With experience in
-              both <span className="font-semibold">Web 2.0</span> &{" "}
-              <span className="font-semibold">Web 3.0</span>, I have delivered
-              projects that meet client expectations and create lasting impact.
-            </p>
+           {/* Description */}
+<p className="text-center md:text-left text-gray-600 font-medium leading-relaxed max-w-lg">
+  I’m a Full Stack Developer who builds scalable, high-performance, and 
+  user-friendly web applications from frontend to backend. I specialize in 
+  modern UI/UX, robust APIs, and cloud-ready architectures. Along with 
+  <span className="font-semibold">Web 2.0</span> &{" "}
+  <span className="font-semibold">Web 3.0</span>, I integrate 
+  <span className="font-semibold"> AI & LLM-powered solutions</span> to create 
+  smart, automated, and data-driven products that deliver real business impact.
+</p>
+
 
             {/* Download CV Button */}
             <a
