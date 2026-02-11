@@ -3,8 +3,6 @@ import React, { useState } from "react";
 
 const Skills = () => {
 
-    const [activeTab, setActiveTab] = useState("education");
-
     const qualifications = [
         {
             type: "Experience",
@@ -60,7 +58,7 @@ const Skills = () => {
         <div className="flex flex-col w-full">
             {/* ----------------------------- */}
             {/* Skills Section */}
-            <div className="bg-gray-100 py-16 flex flex-col items-center px-4">
+            <div className="bg-gray-100 py-16 flex flex-col items-center px-4 sm:px-6">
                 {/* Heading */}
                 <div className="text-center">
                     <h1 className="font-bold text-3xl md:text-4xl text-gray-700">
@@ -72,9 +70,9 @@ const Skills = () => {
                 </div>
 
                 {/* Skills Cards */}
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-10 mt-12 w-full max-w-5xl">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-8 sm:gap-10 mt-12 w-full max-w-5xl">
                     {/* Frontend Card */}
-                    <div className="bg-white rounded-xl shadow-lg p-8 hover:shadow-2xl transition-shadow duration-300">
+                    <div className="bg-white rounded-xl shadow-lg p-6 sm:p-8 hover:shadow-2xl transition-shadow duration-300">
                         <h2 className="text-center text-xl font-semibold text-gray-700 pb-6">
                             Frontend
                         </h2>
@@ -109,7 +107,7 @@ const Skills = () => {
                     </div>
 
                     {/* Backend Card */}
-                    <div className="bg-white rounded-xl shadow-lg p-8 hover:shadow-2xl transition-shadow duration-300">
+                    <div className="bg-white rounded-xl shadow-lg p-6 sm:p-8 hover:shadow-2xl transition-shadow duration-300">
                         <h2 className="text-center text-xl font-semibold text-gray-700 pb-6">
                             Backend
                         </h2>
@@ -148,7 +146,7 @@ const Skills = () => {
 
             {/* ----------------------------- */}
             {/* Qualification Section */}
-            <div className="w-full flex flex-col items-center py-10">
+            <div className="w-full flex flex-col items-center py-10 px-4 sm:px-6">
                 {/* Heading */}
                 <div className="text-center mb-10">
                     <h1 className="font-bold text-3xl text-gray-700">Qualification</h1>
@@ -158,25 +156,25 @@ const Skills = () => {
                 {/* Timeline */}
                 <div className="relative w-full max-w-2xl">
                     {/* Vertical Line */}
-                    <div className="absolute left-5 top-0 w-1 h-full bg-gray-300"></div>
+                    <div className="absolute left-4 sm:left-5 top-0 w-1 h-full bg-gray-300"></div>
 
                     {/* Items */}
                     <div className="flex flex-col gap-10">
                         {qualifications.map((item, idx) => (
-                            <div key={idx} className="flex items-start gap-6 relative">
+                            <div key={idx} className="flex items-start gap-4 sm:gap-6 relative">
                                 {/* Circle marker */}
-                                <div className="w-10 h-10 flex items-center justify-center rounded-full bg-gray-300 text-white font-bold z-10">
+                                <div className="w-9 h-9 sm:w-10 sm:h-10 flex items-center justify-center rounded-full bg-gray-300 text-white font-bold z-10">
                                     {item.type === "Education" ? "🎓" : "💼"}
                                 </div>
 
                                 {/* Card */}
-                                <div className="p-5 bg-white shadow-md rounded-2xl flex-1 flex justify-between items-start">
+                                <div className="p-5 bg-white shadow-md rounded-2xl flex-1 flex flex-col sm:flex-row sm:justify-between sm:items-start gap-3">
                                     <div>
                                         <h3 className="font-bold text-lg text-gray-700">{item.title}</h3>
                                         <p className="text-sm text-gray-500">{item.place}</p>
                                         <p className="text-xs text-gray-400 mt-1">{item.date}</p>
                                     </div>
-                                    <div className="text-xs text-gray-400 whitespace-nowrap pl-4 pt-1">
+                                    <div className="text-xs text-gray-400 whitespace-normal sm:whitespace-nowrap sm:pl-4 sm:pt-1 break-words">
                                         {item.City}
                                     </div>
                                 </div>

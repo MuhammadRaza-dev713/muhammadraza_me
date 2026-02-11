@@ -1,8 +1,5 @@
 
-
-
 import React, { useState } from "react";
-import axios from "axios";
 import { Link, useNavigate } from "react-router-dom";
 import { FiMail } from "react-icons/fi";
 import { FaArrowRight, FaWhatsapp, FaLinkedin } from "react-icons/fa";
@@ -54,16 +51,16 @@ const handleSubmit = (e) => {
   return (
     <div className="bg-gray-100 flex flex-col items-center">
       {/* Heading */}
-      <div className="mt-10 text-center">
-        <h1 className="font-bold text-3xl text-gray-700">Get in Touch</h1>
-        <p className="text-gray-500 text-md">Let’s connect and collaborate</p>
+      <div className="mt-10 text-center px-4">
+        <h1 className="font-bold text-2xl sm:text-3xl text-gray-700">Get in Touch</h1>
+        <p className="text-gray-500 text-sm sm:text-md">Let’s connect and collaborate</p>
       </div>
 
       {/* Contact Section */}
-      <div className="w-full flex flex-col md:flex-row gap-10 mt-12 px-6 md:px-20 pb-20">
+      <div className="w-full flex flex-col md:flex-row gap-10 mt-12 px-4 sm:px-6 md:px-20 pb-20">
         {/* Left: Contact Options */}
         <div className="flex flex-col items-center md:items-start w-full md:w-1/2 gap-6">
-          <h2 className="text-2xl font-semibold text-gray-600">Talk to me</h2>
+          <h2 className="text-xl sm:text-2xl font-semibold text-gray-600">Talk to me</h2>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-1 gap-6 w-full">
             {/* Email */}
@@ -125,8 +122,8 @@ const handleSubmit = (e) => {
         </div>
 
         {/* Right: Contact Form */}
-        <div className="flex flex-col w-full md:w-1/2 bg-white shadow-md rounded-2xl p-8">
-          <h2 className="font-semibold text-xl text-gray-600 mb-6">
+        <div className="flex flex-col w-full md:w-1/2 bg-white shadow-md rounded-2xl p-6 sm:p-8">
+          <h2 className="font-semibold text-lg sm:text-xl text-gray-600 mb-6">
             Write me your project
           </h2>
           <form onSubmit={handleSubmit} className="flex flex-col gap-5">
@@ -138,6 +135,7 @@ const handleSubmit = (e) => {
                 type="text"
                 className="w-full py-3 px-4 rounded-lg border border-gray-300 bg-gray-50 focus:outline-none focus:ring-2 focus:ring-gray-400"
                 placeholder="Your Name"
+                value={name}
                 onChange={(e) => setName(e.target.value)}
                 required
               />
@@ -151,6 +149,7 @@ const handleSubmit = (e) => {
                 type="email"
                 className="w-full py-3 px-4 rounded-lg border border-gray-300 bg-gray-50 focus:outline-none focus:ring-2 focus:ring-gray-400"
                 placeholder="Your Email"
+                value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 required
               />
@@ -164,6 +163,7 @@ const handleSubmit = (e) => {
                 className="w-full py-3 px-4 rounded-lg border border-gray-300 bg-gray-50 focus:outline-none focus:ring-2 focus:ring-gray-400"
                 placeholder="Your Message"
                 rows={5}
+                value={message}
                 onChange={(e) => setMessage(e.target.value)}
                 required
               />
@@ -171,7 +171,7 @@ const handleSubmit = (e) => {
 
             <button
               type="submit"
-              className="w-full md:w-auto bg-gray-700 text-white font-semibold py-3 px-6 rounded-xl hover:bg-gray-600 transition-colors duration-300"
+              className="w-full sm:w-auto bg-gray-700 text-white font-semibold py-3 px-6 rounded-xl hover:bg-gray-600 transition-colors duration-300"
             >
               Send Message
             </button>
@@ -183,7 +183,7 @@ const handleSubmit = (e) => {
       <footer className="bg-white w-full flex flex-col items-center gap-6 py-10 px-4">
         <h1 className="font-bold text-2xl">Muhammad Raza</h1>
 
-        <nav className="flex gap-6 text-gray-600 font-medium">
+        <nav className="flex flex-wrap justify-center gap-4 sm:gap-6 text-gray-600 font-medium">
           <Link to="/home2" className="hover:text-gray-900 transition-colors">
             Home
           </Link>

@@ -13,17 +13,17 @@ export const About = () => {
       </Helmet>
 
       {/* Heading */}
-      <div className="text-center mt-8">
-        <h1 className="font-bold text-3xl md:text-4xl text-gray-700">
+      <div className="text-center mt-8 px-4">
+        <h1 className="font-bold text-2xl sm:text-3xl md:text-4xl text-gray-700">
           About Me
         </h1>
-        <p className="text-gray-500 text-md md:text-lg mt-2">
+        <p className="text-gray-500 text-sm sm:text-md md:text-lg mt-2">
           My Introduction
         </p>
       </div>
 
       {/* Main Content */}
-      <div className="flex flex-col md:flex-row justify-between items-center w-full max-w-6xl px-6 md:px-16 py-12 gap-12">
+      <div className="flex flex-col md:flex-row justify-between items-center w-full max-w-6xl px-4 sm:px-6 md:px-16 py-12 gap-10 sm:gap-12">
         
         {/* Left Animated Blob / Image */}
         <div className="w-full md:w-1/2 flex justify-center">
@@ -55,7 +55,7 @@ export const About = () => {
             </div>
 
            {/* Description */}
-<p className="text-center md:text-left text-gray-600 font-medium leading-relaxed max-w-lg">
+<p className="text-center md:text-left text-gray-600 font-medium leading-relaxed max-w-lg text-sm sm:text-base">
   I’m a Full Stack Developer who builds scalable, high-performance, and 
   user-friendly web applications from frontend to backend. I specialize in 
   modern UI/UX, robust APIs, and cloud-ready architectures. Along with 

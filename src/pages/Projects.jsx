@@ -44,13 +44,13 @@ const Projects = () => {
   return (
     <div className="flex flex-col items-center min-h-screen bg-gray-50 py-12">
       {/* Page Header */}
-      <div className="text-center mb-10">
-        <h1 className="text-4xl font-bold text-gray-700 tracking-wide">Projects</h1>
-        <p className="text-gray-500 text-lg mt-2">A Showcase of My Work</p>
+      <div className="text-center mb-10 px-4">
+        <h1 className="text-3xl sm:text-4xl font-bold text-gray-700 tracking-wide">Projects</h1>
+        <p className="text-gray-500 text-base sm:text-lg mt-2">A Showcase of My Work</p>
       </div>
 
       {/* Project Cards */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 px-6 md:px-12 lg:px-20">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 px-4 sm:px-6 md:px-12 lg:px-20">
         {projectList.map((project, index) => (
           <div
             key={index}
@@ -66,7 +66,7 @@ const Projects = () => {
             </h3>
 
             {/* Project Description */}
-            <p className="mt-2 text-gray-700">{project.description.substring(0, 60)}...</p>
+            <p className="mt-2 text-gray-700 text-sm sm:text-base">{project.description.substring(0, 60)}...</p>
 
             {/* CTA Button (Click Anywhere on Card Now Works) */}
             <button
@@ -85,11 +85,11 @@ const Projects = () => {
           onClick={() => setSelectedProject(null)}
         >
           <div
-            className="bg-white p-6 rounded-lg shadow-lg max-w-lg w-full relative"
+            className="bg-white p-5 sm:p-6 rounded-lg shadow-lg max-w-lg w-full relative max-h-[85vh] overflow-y-auto"
             onClick={(e) => e.stopPropagation()} // Prevent closing when clicking inside the modal
           >
-            <h2 className="text-3xl font-bold text-gray-700">{selectedProject.title}</h2>
-            <p className="mt-3 text-gray-600">{selectedProject.description}</p>
+            <h2 className="text-2xl sm:text-3xl font-bold text-gray-700">{selectedProject.title}</h2>
+            <p className="mt-3 text-gray-600 text-sm sm:text-base">{selectedProject.description}</p>
 
             {/* Vercel Link */}
             {selectedProject.vercelLink && (

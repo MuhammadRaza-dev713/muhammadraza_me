@@ -15,11 +15,11 @@
 }
 
 .blobImg {
-  width: 18rem;
-  height: 18rem;
+  width: clamp(14rem, 40vw, 22rem);
+  height: clamp(14rem, 40vw, 22rem);
   background: url('../../assets/aboutimg04.png');
   background-size: cover;
-  background-position: cover;
+  background-position: center;
 
   animation: morph 3.75s linear infinite;
 }

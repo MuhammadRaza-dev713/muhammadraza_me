@@ -7,8 +7,6 @@ import Projects from '../Projects';
 import Skills from '../Skills';
 import Contact from '../Contact';
 import { SiFiverr } from "react-icons/si";
-import { Helmet } from 'react-helmet-async';
-
 import './HomeCSS.css'
 
 
@@ -20,12 +18,12 @@ const Home2 = () => {
             {/* Hero Section */}
             <div
                 id="home"
-                className="relative min-h-screen flex flex-col md:flex-row justify-center items-center bg-gray- p-6 px-[4rem] gap-10"
+                className="relative min-h-screen flex flex-col md:flex-row justify-center items-center bg-gray- p-6 sm:px-10 md:px-16 lg:px-24 gap-10"
             >
                 {/* Left Content Div */}
-                <div className="flex flex-col items-center md:items-start text-center md:text-left gap-4  mt-6 md:mt-0 w-full md:w-1/2">
+                <div className="flex flex-col items-center md:items-start text-center md:text-left gap-4 mt-6 md:mt-0 w-full md:w-1/2">
                     {/* Social Icons */}
-                    <div className="flex items-center gap-4">
+                    <div className="flex items-center gap-4 flex-wrap justify-center md:justify-start">
                         {/* GitHub */}
                         <a
                             href="https://github.com/MuhammadRaza-dev713"  // Replace with your GitHub URL
@@ -64,7 +62,7 @@ const Home2 = () => {
                         </h1>
                     </div>
                     <div>
-                        <p className="text-lg text-gray-500 max-w-[400px]">
+                        <p className="text-base sm:text-lg text-gray-500 max-w-[400px]">
                             I'm a creative developer based in Dubai, and I'm very passionate and dedicated to my work.
                         </p>
                     </div>
@@ -75,7 +73,7 @@ const Home2 = () => {
                             to="contact"
                             smooth={true}
                             duration={500}
-                            className="bg-gray-700 text-white py-3 px-6 rounded-2xl flex justify-center items-center gap-2 text-xl hover:bg-gray-500 transition-colors duration-300 cursor-pointer"
+                            className="bg-gray-700 text-white py-3 px-6 rounded-2xl flex justify-center items-center gap-2 text-lg sm:text-xl hover:bg-gray-500 transition-colors duration-300 cursor-pointer w-full sm:w-auto"
                         >
                             Say Hello
                             <FiPhone className="text-white mt-1 w-5 h-5" />
@@ -84,7 +82,7 @@ const Home2 = () => {
                 </div>
 
                 {/* Animated Blob */}
-                <div className="blob"></div>
+                <div className="blob" aria-hidden="true"></div>
             </div>
         </div>
 

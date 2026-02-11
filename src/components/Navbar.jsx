@@ -8,7 +8,7 @@ const Navbar = () => {
   const closeMenu = () => setIsOpen(false);
 
   return (
-    <nav className="bg-white sticky top-0 z-50 w-full border-b px-6 sm:px-12 py-4">
+    <nav className="bg-white sticky top-0 z-50 w-full border-b px-4 sm:px-6 md:px-12 py-4">
       <div className="container mx-auto flex justify-between items-center relative">
         
         {/* Logo */}
@@ -16,15 +16,19 @@ const Navbar = () => {
           to="home" 
           smooth={true} 
           duration={500} 
-          className="text-xl font-semibold text-gray-700 hover:text-orange-600 transition-all cursor-pointer"
+          className="text-base sm:text-xl font-semibold text-gray-700 hover:text-orange-600 transition-all cursor-pointer leading-tight max-w-[12rem] sm:max-w-none"
         >
           FullStack Web Engineer
         </Link>
 
         {/* Mobile Menu Button */}
         <button
+          type="button"
           onClick={toggleMenu}
           className="md:hidden text-gray-700 hover:text-orange-600 focus:outline-none transition-all"
+          aria-label="Toggle menu"
+          aria-expanded={isOpen}
+          aria-controls="mobile-menu"
         >
           <svg
             className="w-7 h-7"
@@ -60,10 +64,17 @@ const Navbar = () => {
         </div>
 
         {/* Mobile Navigation - Sliding Menu */}
-        <div className={`fixed inset-0 bg-black/40 z-40 ${isOpen ? "block" : "hidden"}`} onClick={closeMenu}></div>
+        <div
+          className={`fixed inset-0 bg-black/40 z-40 ${isOpen ? "block" : "hidden"}`}
+          onClick={closeMenu}
+          aria-hidden={!isOpen}
+        ></div>
 
         <div
+          id="mobile-menu"
           className={`fixed top-0 right-0 w-64 h-full bg-white shadow-lg z-50 transform ${isOpen ? "translate-x-0" : "translate-x-full"} transition-transform duration-300 ease-in-out md:hidden`}
+          role="dialog"
+          aria-modal="true"
         >
           {/* Close Button */}
           <div className="flex justify-end p-4">

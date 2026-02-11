@@ -11,11 +11,11 @@
   }
   
   .blob {
-    width: 18rem;
-    height: 18rem;
+    width: clamp(14rem, 40vw, 22rem);
+    height: clamp(14rem, 40vw, 22rem);
     background: url('../../assets/homeimg03.png');  /* ✅ Correct Path */
     background-size: cover;
-    background-position: cover;
+    background-position: center;
     animation: morph 3.75s linear infinite;
   }
   
