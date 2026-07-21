@@ -42,9 +42,9 @@ const Projects = () => {
   };
 
   return (
-    <div className="flex flex-col items-center min-h-screen bg-gray-50 py-12">
+    <div className="flex flex-col items-center min-h-screen bg-gray-50 py-16 sm:py-20">
       {/* Page Header */}
-      <div className="text-center mb-10 px-4">
+      <div className="text-center mb-10 sm:mb-14 px-4">
         <h1 className="text-3xl sm:text-4xl font-bold text-gray-700 tracking-wide">Projects</h1>
         <p className="text-gray-500 text-base sm:text-lg mt-2">A Showcase of My Work</p>
       </div>

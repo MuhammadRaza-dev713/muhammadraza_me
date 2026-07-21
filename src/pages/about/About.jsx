@@ -7,13 +7,13 @@ import "./AboutCSS.css";
 
 export const About = () => {
   return (
-    <div className="flex flex-col items-center w-full">
+    <div className="flex flex-col items-center w-full py-16 sm:py-20 px-4 sm:px-6">
       <Helmet>
         <title>About | Portfolio</title>
       </Helmet>
 
       {/* Heading */}
-      <div className="text-center mt-8 px-4">
+      <div className="text-center">
         <h1 className="font-bold text-2xl sm:text-3xl md:text-4xl text-gray-700">
           About Me
         </h1>
@@ -23,7 +23,7 @@ export const About = () => {
       </div>
 
       {/* Main Content */}
-      <div className="flex flex-col md:flex-row justify-between items-center w-full max-w-6xl px-4 sm:px-6 md:px-16 py-12 gap-10 sm:gap-12">
+      <div className="flex flex-col md:flex-row justify-between items-center w-full max-w-6xl md:px-16 pt-10 sm:pt-12 gap-10 sm:gap-12">
         
         {/* Left Animated Blob / Image */}
         <div className="w-full md:w-1/2 flex justify-center">
@@ -45,7 +45,7 @@ export const About = () => {
               <div className="flex flex-col justify-center items-center gap-2 rounded-xl shadow-lg p-6 hover:shadow-2xl transition-shadow duration-300">
                 <FaCheckCircle className="text-gray-600 w-8 h-8 hover:text-green-700 transition-colors duration-300" />
                 <p className="font-semibold">Completed</p>
-                <p className="text-sm text-gray-500">5+ Projects</p>
+                <p className="text-sm text-gray-500">A lot of Projects Experience</p>
               </div>
               <div className="flex flex-col justify-center items-center gap-2 rounded-xl shadow-lg p-6 hover:shadow-2xl transition-shadow duration-300">
                 <FaHeadset className="text-gray-600 w-8 h-8 hover:text-purple-600 transition-colors duration-300" />
@@ -56,19 +56,13 @@ export const About = () => {
 
            {/* Description */}
 <p className="text-center md:text-left text-gray-600 font-medium leading-relaxed max-w-lg text-sm sm:text-base">
-  I’m a Full Stack Developer who builds scalable, high-performance, and 
-  user-friendly web applications from frontend to backend. I specialize in 
-  modern UI/UX, robust APIs, and cloud-ready architectures. Along with 
-  <span className="font-semibold">Web 2.0</span> &{" "}
-  <span className="font-semibold">Web 3.0</span>, I integrate 
-  <span className="font-semibold"> AI & LLM-powered solutions</span> to create 
-  smart, automated, and data-driven products that deliver real business impact.
+  Full-Stack Developer and Conversion Tracking Specialist with experience building scalable web applications, CRM integrations, and marketing automation solutions. Skilled in React, Next.js, Node.js, and Python, with hands-on expertise in GoHighLevel (GHL), HubSpot CRM, business funnels, and workflow automation. Experienced in implementing accurate conversion tracking using Google Tag Manager (GTM), Google Analytics 4 (GA4), Meta Conversions API (CAPI), Google Ads, and Meta Ads, helping businesses optimize performance through reliable analytics and data-driven insights. Passionate about developing high-quality solutions that bridge software engineering with digital marketing technology.
 </p>
 
 
             {/* Download CV Button */}
             <a
-              href="/cv/muhammadrazaresume.pdf"
+              href="/cv/resume.pdf"
               download="MYRESUME.pdf"
               className="bg-gray-800 text-white py-3 px-6 rounded-2xl flex items-center gap-2 text-lg font-semibold hover:bg-gray-600 transition-colors duration-300"
             >

@@ -13,7 +13,7 @@
   .blob {
     width: clamp(14rem, 40vw, 22rem);
     height: clamp(14rem, 40vw, 22rem);
-    background: url('../../assets/homeimg03.png');  /* ✅ Correct Path */
+    background: url('../../assets/upwork_photo_02.png');  /* ✅ Correct Path */
     background-size: cover;
     background-position: center;
     animation: morph 3.75s linear infinite;

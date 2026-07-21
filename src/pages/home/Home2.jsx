@@ -18,7 +18,7 @@ const Home2 = () => {
             {/* Hero Section */}
             <div
                 id="home"
-                className="relative min-h-screen flex flex-col md:flex-row justify-center items-center bg-gray- p-6 sm:px-10 md:px-16 lg:px-24 gap-10"
+                className="relative min-h-screen flex flex-col md:flex-row justify-center items-center bg-white p-6 sm:px-10 md:px-16 lg:px-24 gap-10"
             >
                 {/* Left Content Div */}
                 <div className="flex flex-col items-center md:items-start text-center md:text-left gap-4 mt-6 md:mt-0 w-full md:w-1/2">
@@ -63,7 +63,7 @@ const Home2 = () => {
                     </div>
                     <div>
                         <p className="text-base sm:text-lg text-gray-500 max-w-[400px]">
-                            I'm a creative developer based in Dubai, and I'm very passionate and dedicated to my work.
+                            I transform ideas into scalable digital solutions by combining full-stack development, CRM automation, and conversion tracking to create seamless business experiences.
                         </p>
                     </div>
 

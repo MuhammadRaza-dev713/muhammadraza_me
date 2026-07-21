@@ -17,7 +17,7 @@
 .blobImg {
   width: clamp(14rem, 40vw, 22rem);
   height: clamp(14rem, 40vw, 22rem);
-  background: url('../../assets/aboutimg04.png');
+  background: url('../../assets/second.JPG');
   background-size: cover;
   background-position: center;
 

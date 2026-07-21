@@ -49,15 +49,15 @@ const handleSubmit = (e) => {
 
 
   return (
-    <div className="bg-gray-100 flex flex-col items-center">
+    <div className="bg-gray-100 flex flex-col items-center py-16 sm:py-20">
       {/* Heading */}
-      <div className="mt-10 text-center px-4">
+      <div className="text-center px-4">
         <h1 className="font-bold text-2xl sm:text-3xl text-gray-700">Get in Touch</h1>
         <p className="text-gray-500 text-sm sm:text-md">Let’s connect and collaborate</p>
       </div>
 
       {/* Contact Section */}
-      <div className="w-full flex flex-col md:flex-row gap-10 mt-12 px-4 sm:px-6 md:px-20 pb-20">
+      <div className="w-full flex flex-col md:flex-row gap-10 mt-12 mb-12 sm:mb-16 px-4 sm:px-6 md:px-20">
         {/* Left: Contact Options */}
         <div className="flex flex-col items-center md:items-start w-full md:w-1/2 gap-6">
           <h2 className="text-xl sm:text-2xl font-semibold text-gray-600">Talk to me</h2>
@@ -80,9 +80,9 @@ const handleSubmit = (e) => {
             <div className="flex flex-col items-center text-center p-6 bg-white shadow-md rounded-2xl border border-gray-200 hover:shadow-lg transition-all">
               <FaWhatsapp className="text-gray-500 w-8 h-8 mb-2" />
               <h3 className="font-semibold">WhatsApp</h3>
-              <p className="text-gray-500 text-sm mb-4">+92-328-6500052</p>
+              <p className="text-gray-500 text-sm mb-4">+92-300-650-6365</p>
               <a
-                href="https://wa.me/923286500052"
+                href="https://wa.me/923006506365"
                 className="flex items-center gap-2 text-gray-600 font-medium hover:text-green-600 transition-colors"
               >
                 Write me <FaArrowRight />
